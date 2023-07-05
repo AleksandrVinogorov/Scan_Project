@@ -1,0 +1,67 @@
+.footer {
+    margin-top: 118px;
+    height: 137px;
+    background-color: #029491;
+
+}
+
+.footer__wrapper {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1480px) {
+        margin: 0 45px;
+    }
+
+    @media (max-width: 480px) {
+        margin: 0 20px;
+    }
+    @media (max-width: 420px) {
+        padding: 0 10px;
+    }
+}
+
+.footer__logo {
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+.footer__logo-mobile {
+    display: none;
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+}
+
+.footer__description {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: right;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0.14px;
+}
+
+.footer__contacts {
+    width: 199px;
+
+}
+
+.card__image {
+    @media (max-width: 830px) {
+        width: 56.93px;
+        height: 64px;
+    }
+}
+
+.card-main__includes-list {
+    @media (max-width: 830px) {
+        height: 90px;
+    }
+}

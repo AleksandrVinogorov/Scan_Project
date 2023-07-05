@@ -1,0 +1,392 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    height: 93px;
+    margin: 0 auto;
+
+    font-family: 'Inter', sans-serif;
+
+    @media (max-width: 1366px) {
+        padding: 0 60px;
+    }
+    @media (max-width: 920px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 420px) {
+        padding: 0 10px;
+    }
+}
+
+.header__logo {
+    cursor: pointer;
+}
+
+.header__registration {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+
+    button {
+        border: 0;
+        padding: 0;
+
+        p {
+            margin: 0;
+            font-weight: 500;
+            font-family: 'Inter';
+            font-size: 14px;
+            line-height: 16.94px;
+
+        }
+    }
+
+    @media (max-width: 830px) {
+        display: none;
+    }
+}
+
+.header__logout-wrapper {
+    @media (max-width: 830px) {
+        display: none;
+    }
+}
+
+.header__logout {
+    display: flex;
+}
+
+
+.header__logout-button {
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: "Inter", sans-serif;
+    border: 0;
+    background-color: transparent;
+    font-weight: 400;
+
+    p {
+        margin: 0;
+    }
+
+    gap: 3px;
+
+    .header__logout-name {
+        font-size: 14px;
+    }
+
+    .header__logout-out {
+        font-size: 10px;
+        opacity: 40%;
+    }
+}
+
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 200px;
+    gap: 49px;
+
+    @media (max-width: 830px) {
+        display: none;
+    }
+}
+
+
+// Бургер-меню
+.header__burger {
+    display: none !important;
+    background-color: transparent;
+    border: 0;
+
+    @media (max-width: 830px) {
+        display: block !important;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        top: -100%;
+        /* начальное состояние */
+    }
+
+    to {
+        top: 0;
+        /* конечное состояние */
+    }
+}
+
+.header__burger-content {
+    display: none;
+
+    @media (max-width: 830px) {
+        animation-duration: 0.2s;
+        /* продолжительность анимации */
+        animation-timing-function: ease-out;
+        animation-name: slide-down;
+        /* используем анимацию slide-down при добавлении класса */
+
+        display: block;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 853px;
+        background-color: #029491;
+        left: 0;
+        z-index: 2;
+
+        .header__nav-burger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 200px;
+            gap: 49px;
+
+            .nav-link {
+                color: #fff;
+            }
+
+            @media (max-width: 830px) {
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                margin-top: 36px;
+                justify-content: space-between;
+                max-height: 300px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 540px) {
+                height: auto;
+            }
+
+            @media (max-width: 480px) {
+                gap: 26px;
+            }
+        }
+
+        .burger-content__head {
+            display: flex;
+            margin: 0 16px;
+            justify-content: space-between;
+
+        }
+
+        .burger-content__head-btn {
+            background-color: transparent;
+            border: 0;
+        }
+
+        .burger-content__registration {
+            flex-direction: column;
+            margin-top: 36px;
+            display: flex;
+            align-items: center;
+            gap: 20.5px;
+
+            .header__registration-signup {
+                border: 0px;
+                color: #67bfbd;
+                font-size: 16px;
+            }
+
+            a {
+                width: 90%;
+
+                .header__registration-login {
+                    width: 100%;
+                    height: 51px;
+                    border: 0;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+
+        }
+    }
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+
+    &:hover {
+        color: rgb(123, 123, 123);
+        transition: 0.2s;
+    }
+}
+
+.header__content {
+    display: flex;
+    gap: 128px;
+    align-items: center;
+
+    @media (max-width: 1080px) {
+        gap: 30px;
+    }
+}
+
+.isolation-line {
+    width: 2px;
+    height: 26px;
+    background-color: #029491;
+}
+
+.header__registration-signup {
+    width: 146px;
+    height: 17px;
+    color: rgba(0, 0, 0, 1);
+    opacity: 40%;
+    background-color: transparent;
+}
+
+.header__registration-login {
+    border-radius: 5%;
+    width: 65px;
+    height: 26px;
+    background-color: #7CE3E1;
+
+    &:hover {
+        background-color: #7caae3;
+        transition: 0.2s ease;
+    }
+}
+
+.header__hidden-info {
+    width: 175px;
+
+    @media (max-width: 1100px) {
+        display: none;
+    }
+}
+
+.header__content-unauthorized {
+    display: flex;
+    align-items: center;
+    gap: 63px;
+
+    @media (max-width: 960px) {
+        gap: 100px;
+    }
+}
+
+.header__burger {
+    display: block;
+}
+
+
+
+.header__company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    align-items: flex-end;
+    padding-right: 8px;
+    width: 175px;
+    height: 63px;
+    background-color: rgb(244, 244, 244);
+    box-sizing: border-box;
+
+    .header__company-info-used {
+        text-align: end;
+        gap: 7px;
+        display: flex;
+        color: rgb(146, 146, 146);
+        align-items: center;
+
+        .company-info__used-title {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            margin: 0;
+
+            @media (max-width: 480px) {
+                font-size: 8px;
+            }
+        }
+
+        .company-info__used {
+            color: rgba(0, 0, 0, 1);
+            font-weight: 700;
+            opacity: 100%;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+            gap: 2px;
+            align-items: flex-start;
+        }
+    }
+
+    .header__company-info-limit {
+        text-align: start;
+        gap: 7px;
+        display: flex;
+        color: rgb(146, 146, 146);
+        align-items: center;
+
+        .company-info__limit-title {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            margin: 0;
+
+            @media (max-width: 480px) {
+                font-size: 8px;
+            }
+        }
+
+        .company-info__limit {
+            color: rgba(138, 197, 64, 1);
+            font-weight: 700;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+            gap: 2px;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: 132px;
+        height: 75px;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: flex-start;
+        padding-left: 10px;
+        gap: 7px;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.header__company-info-spinner {
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-right: 40%;
+}

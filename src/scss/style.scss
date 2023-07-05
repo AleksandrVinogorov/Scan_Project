@@ -1,0 +1,32 @@
+@import 'mainPage';
+@import "loginPage";
+@import "searchPage";
+@import "resultPage";
+@import "footer";
+@import "header";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;600;700;900&family=Roboto&display=swap');
+
+
+@font-face {
+    font-family: 'Ferry';
+    src: url('/src/fonts/ferry_black.otf') format('opentype');
+}
+body {
+    margin: 0;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
