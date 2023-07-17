@@ -49,12 +49,12 @@ function LoginForm() {
       </div>
       <div className='authorization__form-data'>
         <div className="authorization__form-login">
-          <label htmlFor="login" className="label">Логин или номер телефона:</label>
+          <label htmlFor="login" className="label">Логин или номер телефона: <strong>sf_student1</strong></label>
           <input className='login' type="text" value={credentials.login} onChange={e => setCredentials({ ...credentials, login: e.target.value })} />
           {isError && <div className="error-message">{"Введите корректные данные"}</div>}
         </div>
         <div className="authorization__form-password">
-          <label className="password">Пароль:</label>
+          <label className="password">Пароль: <strong>4i2385j</strong></label>
           <input className='pass' type="password" value={credentials.password} onChange={e => setCredentials({ ...credentials, password: e.target.value })} />
           {isError && <div className="error-message">{errorMessage}</div>}
         </div>
